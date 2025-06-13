@@ -37,7 +37,7 @@ const Sidebar = ({ isDarkMode }) => {
             to="/appointment"
             className={({ isActive }) => `nav-item nav-link ${isActive ? 'active' : ''}`}
           >
-            <i className="fa-solid fa-calendar-check"></i>Appointment
+            <i className="fa-solid fa-calendar-check"></i>Order
           </NavLink>
           <NavLink
             to="/reports"
