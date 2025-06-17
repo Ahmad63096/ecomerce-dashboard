@@ -24,7 +24,7 @@ function Analytics() {
         const token = localStorage.getItem('authToken');
 
         // Fetch leads
-        const leadsRes = await fetch('https://ecom.devspandas.com/api/chat/leads_data?type=leads', {
+        const leadsRes = await fetch(`${process.env.REACT_APP_API}/chat/leads_data?type=leads`, {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`,
@@ -33,7 +33,7 @@ function Analytics() {
         const leadsResult = await leadsRes.json();
 
         // Fetch dropoffs
-        const dropoffsRes = await fetch('https://ecom.devspandas.com/api/chat/leads_data?type=dropoffs', {
+        const dropoffsRes = await fetch(`${process.env.REACT_APP_API}/chat/leads_data?type=dropoffs`, {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${token}`,

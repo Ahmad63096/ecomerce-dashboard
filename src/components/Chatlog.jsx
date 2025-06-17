@@ -26,11 +26,10 @@ function Chatlog() {
   const [chats, setChats] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortAscending, setSortAscending] = useState(false);
-  // eslint-disable-next-line
   const [isSearching, setIsSearching] = useState(false);
   useEffect(() => {
     const token = localStorage.getItem("authToken");
-    fetch('https://ecom.devspandas.com/api/chat/fetch_chats?page=1', {
+    fetch(`${process.env.REACT_APP_API}/chat/fetch_chats?page=1`, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -63,7 +62,7 @@ function Chatlog() {
       if (searchTerm.trim() !== "") {
         setIsSearching(true);
         const token = localStorage.getItem("authToken");
-        fetch(`https://ecom.devspandas.com/api/chat/search_recent_chats?query=${encodeURIComponent(searchTerm)}`, {
+        fetch(`${process.env.REACT_APP_API}/chat/search_recent_chats?query=${encodeURIComponent(searchTerm)}`, {
           method: 'GET',
           headers: {
             'Authorization': `Bearer ${token}`,

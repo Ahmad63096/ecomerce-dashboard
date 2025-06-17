@@ -13,7 +13,7 @@ function Chart() {
       try {
         const token = localStorage.getItem('authToken');
         const response = await fetch(
-          'https://ecom.devspandas.com/api/chat/chat-stats?include=chat_count',
+          `${process.env.REACT_APP_API}/chat/chat-stats?include=chat_count`,
           {
             method: 'GET',
             headers: {

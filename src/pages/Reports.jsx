@@ -25,7 +25,7 @@ function Reports() {
     try {
       const token = localStorage.getItem("authToken");
       const response = await fetch(
-        'https://ecom.devspandas.com/api/export/generate-report',
+        `${process.env.REACT_APP_API}/export/generate-report`,
         {
           method: 'POST',
           headers: {

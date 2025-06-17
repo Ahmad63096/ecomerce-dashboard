@@ -12,7 +12,6 @@ function Dashboard() {
               <h3>This is Dashboard</h3>
             </div>
           </div>
-          
         </div>
         <div className="container-fluid pt-4 px-4 ">
           <div className="rounded-top p-4">

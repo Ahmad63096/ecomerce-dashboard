@@ -9,7 +9,7 @@ function Logs() {
   useEffect(() => {
     setIsLoading(true);
     const token = localStorage.getItem("authToken");
-    fetch(`https://ecom.devspandas.com/api/chat/fetch_chats?page=${currentPage}`, {
+    fetch(`${process.env.REACT_APP_API}/chat/fetch_chats?page=${currentPage}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ function Logs() {
   const handleDownload = async (fileType, objectId, name) => {
     if (!objectId) return;
     const token = localStorage.getItem("authToken");
-    const url = `https://ecom.devspandas.com/api/export/export-file/?file_type=${fileType}&object_id=${objectId}`;
+    const url = `${process.env.REACT_APP_API}/export/export-file/?file_type=${fileType}&object_id=${objectId}`;
 
     try {
       const response = await fetch(url, {
@@ -70,7 +70,7 @@ function Logs() {
     setIsLoading(true);
     try {
       const token = localStorage.getItem("authToken");
-      const response = await fetch(`https://ecom.devspandas.com/api/chat/search_chats?query=${searchQuery}`, {
+      const response = await fetch(`${process.env.REACT_APP_API}/chat/search_chats?query=${searchQuery}`, {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',

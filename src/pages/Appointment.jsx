@@ -134,7 +134,7 @@ function Appointment() {
     <>
       <div className="container-fluid pt-4 px-4">
         <div className="rounded h-100 p-4">
-          <h6 className="mb-4">Order Table</h6>
+          <h6 className="mb-4">Appointment Table</h6>
           <div className="table-responsive">
             <table className="table">
               <thead>

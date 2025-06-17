@@ -46,7 +46,7 @@ function Chatanalytics() {
     const token = localStorage.getItem('authToken');
     const fetchMetric = async (metric) => {
       try {
-        const response = await fetch(`https://ecom.devspandas.com/api/chat/chat_analysis?include=${metric}`, {
+        const response = await fetch(`${process.env.REACT_APP_API}/chat/chat_analysis?include=${metric}`, {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
