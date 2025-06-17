@@ -26,6 +26,7 @@ function Chatlog() {
   const [chats, setChats] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortAscending, setSortAscending] = useState(false);
+  // eslint-disable-next-line 
   const [isSearching, setIsSearching] = useState(false);
   useEffect(() => {
     const token = localStorage.getItem("authToken");
