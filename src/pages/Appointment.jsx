@@ -98,10 +98,10 @@ function Appointment() {
     }
   };
 
-  const handleEdit = (data) => {
-    setSelectedData(data);
-    setEditModal(true);
-  };
+  // const handleEdit = (data) => {
+  //   setSelectedData(data);
+  //   setEditModal(true);
+  // };
 
   const handleClose = () => {
     setViewModal(false);
