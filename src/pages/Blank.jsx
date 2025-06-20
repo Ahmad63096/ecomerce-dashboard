@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar'
 function Dashboard() {
   return (
     <>
+    
       <div className="content">
         <Navbar />
         <div className="container-fluid pt-4 px-4">
