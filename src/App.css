@@ -23,7 +23,16 @@
   --card-two: #ffffff;
   --card-three: #ffffff;
 }
-
+.status-menu{
+  border: 1px solid var(--primary);
+  position: relative;
+}
+.status-menu .dropdown-item{
+  color: var(--primary);
+}
+.status-menu .dropdown-item:hover{
+  color: var(--second);
+}
 .back-to-top {
   position: fixed;
   display: none;
