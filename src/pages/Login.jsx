@@ -51,7 +51,7 @@ function Login() {
       return;
     }
     setErrors({});
-    console.log("Form Submitted", formData);
+    // console.log("Form Submitted", formData);
 
     fetch(process.env.REACT_APP_API_URLLOGIN, {
       method: "POST",
@@ -67,7 +67,7 @@ function Login() {
         return response.json();
       })
       .then((data) => {
-        console.log("Login Successful", data);
+        // console.log("Login Successful", data);
         localStorage.setItem("authToken", data.access_token);
         setSuccessMessage("Login successful! Redirecting..."); // Set success message
         setTimeout(() => {

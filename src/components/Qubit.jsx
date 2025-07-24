@@ -27,7 +27,7 @@ function Qubit({bot_type}) {
     predefined_intents:"",
     prompts: "",
   });
-  console.log("bot type: " , bot_type);
+  // console.log("bot type: " , bot_type);
   useEffect(() => {
     const fetchSettings = async () => {
       try {
@@ -36,7 +36,7 @@ function Qubit({bot_type}) {
           throw new Error("Failed to fetch settings");
         }
         const data = await response.json();
-        console.log('get data:', data.data.settings);
+        // console.log('get data:', data.data.settings);
         setSettings({
           company_name: data.data.settings.company_name || "",
           fromEmail: data.data.settings.fromEmail || "",
@@ -77,7 +77,7 @@ function Qubit({bot_type}) {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();    
-    console.log("Submit data:", settings);
+    // console.log("Submit data:", settings);
     try {
       const token = localStorage.getItem("authToken");
       const response = await fetch(`https://bot.devspandas.com/api/panel/create-control-panel-settings?bot_type=${bot_type}`, {

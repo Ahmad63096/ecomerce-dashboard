@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 function Configcode() {
   const [copySuccess, setCopySuccess] = useState("");
   const embedCode = `<iframe src="https://devbot.devspandas.com/" 
@@ -44,5 +43,4 @@ function Configcode() {
     </div>
   )
 }
-
 export default Configcode

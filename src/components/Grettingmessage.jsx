@@ -184,45 +184,45 @@ function GreetingMessage() {
     setValidationMessage('');
 
     // Create the payload based on the active modal
-    const payload =
-      activeModal === 'greeting'
-        ? { greetings_message: formData.greetings_message }
-        : { farewell_message: formData.farewell_message };
+    // const payload =
+    //   activeModal === 'greeting'
+    //     ? { greetings_message: formData.greetings_message }
+    //     : { farewell_message: formData.farewell_message };
 
     // Log the form data to the console
-    console.log('Form data being submitted:', payload);
+    // console.log('Form data being submitted:', payload);
 
-    try {
-      const token = localStorage.getItem("authToken");
-      const response = await fetch(process.env.REACT_APP_API_GRETTINGURL, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`
-        },
-        body: JSON.stringify(payload),
-      });
+    // try {
+    //   const token = localStorage.getItem("authToken");
+    //   const response = await fetch(process.env.REACT_APP_API_GRETTINGURL, {
+    //     method: 'POST',
+    //     headers: {
+    //       'Content-Type': 'application/json',
+    //       Authorization: `Bearer ${token}`
+    //     },
+    //     body: JSON.stringify(payload),
+    //   });
 
-      if (response.ok) {
-        const data = await response.json();
-        setResponseMessage('Message updated successfully!');
-        console.log('Response:', data);
+    //   if (response.ok) {
+    //     const data = await response.json();
+    //     setResponseMessage('Message updated successfully!');
+    //     console.log('Response:', data);
 
-        // Clear the relevant input
-        setFormData((prevData) => ({
-          ...prevData,
-          [activeModal === 'greeting' ? 'greetings_message' : 'farewell_message']: '',
-        }));
+    //     // Clear the relevant input
+    //     setFormData((prevData) => ({
+    //       ...prevData,
+    //       [activeModal === 'greeting' ? 'greetings_message' : 'farewell_message']: '',
+    //     }));
 
-        setShow(false);
-      } else {
-        setResponseMessage('Failed to update messages.');
-        console.error('Failed to submit:', response.statusText);
-      }
-    } catch (error) {
-      setResponseMessage('Error submitting the form.');
-      console.error('Error:', error);
-    }
+    //     setShow(false);
+    //   } else {
+    //     setResponseMessage('Failed to update messages.');
+    //     console.error('Failed to submit:', response.statusText);
+    //   }
+    // } catch (error) {
+    //   setResponseMessage('Error submitting the form.');
+    //   console.error('Error:', error);
+    // }
   };
   const handleClose = () => {
     setShow(false);

@@ -44,7 +44,7 @@ function Chatlog() {
         return response.json();
       })
       .then((data) => {
-        console.log("API response data is:", data);
+        // console.log("API response data is:", data);
         setChats(data.chats);
       })
       .catch((error) => {

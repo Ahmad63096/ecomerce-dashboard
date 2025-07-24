@@ -68,7 +68,7 @@ function CreateUserForm() {
 
     if (Object.keys(newErrors).length > 0) {
       setErrors(newErrors);
-      console.log("Validation failed:", newErrors);
+      // console.log("Validation failed:", newErrors);
       return;
     }
 
@@ -81,7 +81,7 @@ function CreateUserForm() {
     }
 
     setErrors({});
-    console.log("Form data before submission:", formData);
+    // console.log("Form data before submission:", formData);
 
     fetch(process.env.REACT_APP_API_URLSIGNUP, {
       method: "POST",
@@ -104,7 +104,7 @@ function CreateUserForm() {
           }));
           setSuccessMessage("");
         } else {
-          console.log("Signup successful:", data);
+          // console.log("Signup successful:", data);
           setSuccessMessage(data.Message);
           setFormData({
             name: "",

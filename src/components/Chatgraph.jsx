@@ -46,7 +46,7 @@ function Chatgraph({ graphdata }) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const apiData = await response.json();
-        console.log("Raw API Response:", apiData);
+        // console.log("Raw API Response:", apiData);
         let labels = [];
         let dataValues = [];
         if (graphdata === "Total Chats") {

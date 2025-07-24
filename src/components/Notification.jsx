@@ -11,7 +11,7 @@ function Notification() {
     setSocket(ws);
     ws.onmessage = (event) => {
       const message = JSON.parse(event.data);
-      console.log('notification', message);
+      // console.log('notification', message);
       if (message.event === "new_chat") {
         setNotifications((prevNotifications) => [
           ...prevNotifications,

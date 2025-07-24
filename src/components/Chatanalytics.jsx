@@ -67,9 +67,9 @@ function Chatanalytics() {
         fetchMetric('unique_users'),
         fetchMetric('peak_times'),
       ]);
-      console.log('Total Chats API Response:', totalChats);
-      console.log('Unique Users API Response:', uniqueUsers);
-      console.log('Peak Times API Response:', peakTimes);
+      // console.log('Total Chats API Response:', totalChats);
+      // console.log('Unique Users API Response:', uniqueUsers);
+      // console.log('Peak Times API Response:', peakTimes);
       setTotalChatsData(totalChats);
       setUniqueUsersData(uniqueUsers);
       setPeakTimesData(peakTimes);
@@ -80,7 +80,7 @@ function Chatanalytics() {
 
   const handleCardClick = (data) => {
     setModalData(data);
-    console.log('Graph Data:', data);
+    // console.log('Graph Data:', data);
   };
 
   const closeModal = () => setModalData(null);

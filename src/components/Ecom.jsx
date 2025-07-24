@@ -28,7 +28,7 @@ const [successMessage, setSuccessMessage] = useState("");
           throw new Error("Failed to fetch settings");
         }
         const data = await response.json();
-        console.log('get data:', data);
+        // console.log('get data:', data);
         setFormData({
           recipientEmail: data.data.recipientEmail || "",
           fromEmail: data.data.fromEmail || "",

@@ -14,7 +14,7 @@ const fetchWooOrders = async () => {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
-    console.log("WooCommerce Orders:", data);
+    // console.log("WooCommerce Orders:", data);
     return data;
   } catch (error) {
     console.error("Error fetching WooCommerce orders:", error);
@@ -54,8 +54,8 @@ function Appointment() {
         throw new Error(`Status update failed with status ${response.status}`);
       }
 
-      const updatedOrder = await response.json();
-      console.log("Status updated:", updatedOrder);
+      // const updatedOrder = await response.json();
+      // console.log("Status updated:", updatedOrder);
 
       // Update local state
       setAppointments((prev) =>
@@ -87,8 +87,8 @@ function Appointment() {
         throw new Error(`Delete failed with status ${response.status}`);
       }
 
-      const result = await response.json();
-      console.log("Order deleted:", result);
+      // const result = await response.json();
+      // console.log("Order deleted:", result);
 
       // Remove the order from local state
       setAppointments((prev) => prev.filter((item) => item.id !== orderId));
@@ -136,7 +136,7 @@ function Appointment() {
   };
   useEffect(() => {
     fetchWooOrders().then((data) => {
-      console.log("Fetched Orders:", data);
+      // console.log("Fetched Orders:", data);
       const transformed = data.map((order, index) => {
         const billing = order.billing;
         const email = order.billing;
